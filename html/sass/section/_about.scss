@@ -1,0 +1,145 @@
+.about {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 70vh;
+  overflow: hidden;
+}
+.about-text {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.about-text p {
+  font-size: 1rem;
+  line-height: 30px;
+  width: 85%;
+}
+.about-imgs {
+  position: relative;
+}
+.img-first {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  height: 750px;
+}
+
+.img-first img {
+  display: flex;
+  width: 100%;
+  object-fit: cover;
+}
+
+.about-exp {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: -10rem;
+}
+.about-exp .row {
+  width: 100%;
+}
+.about-exp h3 {
+  font-size: 20px;
+  letter-spacing: 1px;
+}
+.exp,
+.clientes {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  background: #c5a48e;
+  height: 150px;
+  padding-left: 3rem;
+}
+
+.clientes {
+  background: #fff;
+}
+.about-exp .clientes h3 {
+  color: $black;
+}
+.about-exp .clientes h1 {
+  color: $black;
+}
+.about-exp h3 {
+  color: #fff;
+}
+.about-exp h1 {
+  color: #fff;
+  margin-top: 1rem;
+  font-size: 50px;
+  letter-spacing: 5px;
+}
+
+@include max-up(lg) {
+  .about-exp h3 {
+    font-size: 18px;
+    letter-spacing: 1px;
+  }
+
+  .exp,
+  .clientes {
+    padding-left: 2rem;
+  }
+}
+
+@include max-up(md) {
+  .about-exp {
+    height: 200px;
+  }
+  .img-first {
+    height: 450px;
+  }
+  .about-exp h1 {
+    font-size: 30px;
+  }
+  .about-exp h3 {
+    font-size: 16px;
+  }
+  .about-exp {
+    width: 420px;
+    margin-left: -3rem;
+  }
+  .exp,
+  .clientes {
+    width: 100%;
+    padding-left: 1rem;
+    margin-right: 2rem;
+    height: 116px;
+  }
+}
+@include max-up(sm) {
+  .about-exp {
+    width: 100%;
+    margin-left: 0;
+  }
+  .about-exp .col-6:nth-child(1) {
+    padding-left: 0;
+    padding-right: 0.5rem;
+  }
+  .about-exp .col-6:nth-child(2) {
+    padding-right: 0;
+    padding-left: 0.5rem;
+  }
+  .about-exp h1 {
+    font-size: 28px;
+  }
+  .about-exp {
+    height: 150px;
+  }
+  .exp,
+  .clientes {
+    padding-left: 0.5rem;
+    height: 100px;
+  }
+}

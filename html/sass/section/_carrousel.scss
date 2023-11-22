@@ -1,0 +1,72 @@
+.carrousel {
+  // min-height: 100vh;
+  margin-top: 8rem;
+  // margin-bottom: 4rem;
+}
+.myCarrousel img {
+  height: 60vh;
+  transition: 0.25s all ease-in-out;
+}
+.carrousel h1 {
+  text-align: center;
+}
+
+.carrousel .swiper-slide {
+  position: relative;
+  overflow: hidden;
+}
+
+.carrousel .swiper-slide:hover img {
+  transform: scale(1.1);
+}
+.carrousel .carrousel-backdrop {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.788);
+  transition: 0.25s all ease-in-out;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 5;
+}
+.carrousel .swiper-slide:hover .carrousel-backdrop {
+  opacity: 1;
+  visibility: visible;
+}
+
+.carrousel .carrousel-backdrop h1 {
+  font-size: 40px;
+  font-weight: normal;
+  letter-spacing: 1.2px;
+}
+
+// font-size: 1.2rem;
+//     margin-top: 0.5rem;
+//     font-weight: bold;
+
+.carrousel .carrousel-backdrop h2 {
+  font-size: 1.2rem;
+  margin-top: 0.5rem;
+  font-weight: bold;
+}
+
+
+@include max-up-custom(800px){
+  .carrousel{
+    margin-top: 4rem;
+    margin-bottom: 0rem;
+    min-height: auto;
+  }
+  .carrousel .myCarrousel{
+    margin-bottom: 0 !important;
+  }
+  .myCarrousel img {
+    height: 50vh;
+    transition: 0.25s all ease-in-out;
+  }
+}

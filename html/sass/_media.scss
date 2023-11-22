@@ -1,0 +1,37 @@
+$xs: 375px;
+$sm: 600px;
+$md: 1024px;
+$lg: 1240px;
+$xl: 1366px;
+$xxl: 1366.5px;
+
+$beakpoints: (
+  xs: $xs,
+  sm: $sm,
+  md: $md,
+  lg: $lg,
+  xl: $xl,
+  xxl: $xxl,          
+);
+
+
+@mixin max-up($breakpoint) {
+    @media screen and (max-width: map-get($beakpoints, $breakpoint)) {
+      @content;
+    }
+}
+
+
+@mixin min-up($breakpoint) {
+    @media screen and (min-width: map-get($beakpoints, $breakpoint)) {
+        @content;
+      }
+}
+
+
+@mixin max-up-custom($breakpoint) {
+    @media screen and (max-width: $breakpoint) {
+      @content;
+    }
+  }
+  

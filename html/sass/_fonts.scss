@@ -1,0 +1,73 @@
+@font-face {
+    font-family: 'OPTITimes-Roman';
+    src:url('../fonts/OPTITimes-Roman.ttf.woff') format('woff'),
+        url('../fonts/OPTITimes-Roman.ttf.svg#OPTITimes-Roman') format('svg'),
+        url('../fonts/OPTITimes-Roman.ttf.eot'),
+        url('../fonts/OPTITimes-Roman.ttf.eot?#iefix') format('embedded-opentype'); 
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Elegant';
+    src:url('../fonts/Elegant-Z1Km.ttf') format('truetype');
+    font-style: normal;
+    font-weight: normal;
+}
+@font-face {
+    font-family: 'Derivia';
+    src:url('../fonts/Derivia-Regular.otf') format('opentype');
+    font-style: normal;
+    font-weight: normal;
+}
+@font-face {
+    font-family: 'Ginebra';
+    src:url('../fonts/ginebra_font.ttf') format('truetype');
+    font-style: normal;
+    font-weight: normal;
+}
+@font-face {
+    font-family: 'OpenSans Regular';
+    src:url('../fonts/OpenSans-Regular.ttf') format('truetype');
+    font-style: normal;
+}
+@font-face {
+    font-family: 'OpenSans Bold';
+    src:url('../fonts/OpenSans-Bold.ttf') format('truetype');
+    font-style: normal;
+}
+@font-face {
+    font-family: 'OpenSans Semi Bold';
+    src:url('../fonts/OpenSans-Semibold.ttf') format('truetype');
+
+    font-style: normal;
+}
+
+.elegant{
+    font-family: 'Elegant';
+}
+.ginebra{
+    font-family: 'Ginebra';
+    text-transform: uppercase;
+}
+.derivia{
+    font-family: 'Derivia';
+}
+.optRoman{
+    font-family: 'OPTITimes-Roman';
+}
+
+.openRegular{
+    font-family: 'OpenSans Regular';
+}
+.openBold{
+    font-family: 'OpenSans Bold';
+}
+.openSemiBold{
+    font-family: 'OpenSans Semi Bold';
+}
+
+.title-section{
+    color: #2A2826;
+    font-size: 70px;
+    font-weight: normal;
+    line-height: 70px;
+}

@@ -1,0 +1,209 @@
+header{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 120px;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .35s all ease-in-out;
+
+}
+header.active{
+    background: #1A1816;
+    position: fixed;
+    height: 90px;
+
+}
+header .navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 4rem;
+    padding-right: 4rem;
+}
+
+.hamburguer-mobile{
+    display: none;
+}
+.logo{
+    display: flex;
+    width: 30%;
+}
+.logo a{
+    color: rgba(255, 255, 255, 0.849);
+    font-size: 25px;
+    letter-spacing: 2px;
+    text-decoration: none;
+    font-weight: 300;
+}
+.logo a span{
+    margin-left: .0rem;
+}
+.menu{
+    display: flex;
+    width: 90%;
+}
+
+.menu ul{
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+.menu .link-menu__container{
+    display: flex;
+    font-size: 14px;
+    letter-spacing: 1.5px;
+    margin-left: 3rem;
+    transition: .25s all ease-in-out;
+
+}
+
+.link-whatsapp{
+    background-color: $white;
+    border: 2px solid $white;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    color: $black !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .25s all ease-in;
+}
+.link-whatsapp:hover{
+    background: transparent;
+    color: $white !important;
+    transition: .25s all ease-out;
+}
+.link-whatsapp i{
+    font-size: 1.3rem;
+    margin-right: .5rem;
+}
+.menu .link-menu__container:hover .link-whatsapp::before{
+    width: 0 !important;
+}
+.menu .link-menu__container:hover .link-menu::before{
+    width: 100%;
+}
+.menu .link-menu{
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    text-decoration: none;
+    color: $white;
+    position: relative;
+    font-weight: 600;
+}
+
+.menu .link-menu::before{
+    position: absolute;
+    content: "";
+    bottom: 0;
+    width: 0%;
+    background: #fff;
+    height: 2px;
+    transition: .25s all ease-in-out;
+}
+
+
+@include max-up(lg){
+    header{
+        position: fixed;
+        top: 0;
+        width: 100%;
+        height: 90px;
+        background: #1A1816;
+    }
+    .hamburguer-mobile{
+        display: flex;
+        color: $white;
+    }
+    .logo{
+        width: 100%;
+    }
+    header .menu{
+        position: fixed;
+        top: 90px;
+        left: 0;
+        background: #1A1816;
+        width: 100%;
+        padding-left: 4rem;
+        padding-right: 4rem;
+        max-height: 0;
+        transition: max-height 0.35s ease-out;
+        overflow: hidden;
+    }
+    header .menu.show{
+        max-height: 100vh;
+        transition: max-height 0.35s ease-in;
+    }
+    .menu ul{
+        margin-top: 10%;
+        justify-content: flex-start;
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        height: 100vh;
+
+    }
+    .menu .link-menu{
+        font-weight: 300;
+        color: rgba(255, 255, 255, 0.849);
+    }
+    header .menu .link-menu__container{
+        margin-left: 0;
+        margin-top: .5rem;
+        margin-bottom: .5rem;
+        font-size: 28px;
+    }
+    
+    header .menu .link-whatsapp{
+       background: transparent;
+       color: $white !important;
+    }
+
+}
+
+@include max-up(md){
+    header .navbar{
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+    header .menu {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+    header .menu .link-menu__container{
+        font-size: 26px;
+    }
+
+}
+
+@include max-up(sm){
+    .logo a{
+        font-size: 20px;
+    }
+    header .navbar{
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    header .menu {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    header{
+        height: 80px;
+    }
+    header .menu {
+        position: fixed;
+        top: 80px;
+    }
+    header.active{
+        height: 80px;
+    }
+    header .menu .link-menu__container {
+        font-size: 20px;
+    }
+}

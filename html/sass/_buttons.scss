@@ -1,0 +1,50 @@
+.btn{
+    width: auto;
+    text-decoration: none;
+    border: 2px solid $white;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $white;
+    transition: .35s all ease-in-out;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.btn-white{
+    color: $white;
+    background: transparent;
+    border: 2px solid $white;
+}
+.btn-black{
+    color: $black;
+    background: transparent;
+    border: 2px solid $black;
+}
+.btn-black:hover{
+    color: $white;
+    background: $black;
+    border: 2px solid $black;
+}
+.btn-white:hover{
+    color: $black;
+    background: $white;
+    border: 2px solid $white;
+}
+
+
+@include max-up(md){
+    .btn{
+        padding-top: .9rem;
+        padding-bottom: .9rem;
+        font-size: 14px;
+        padding-left: 1.5rem;
+        padding-right:1.5rem;
+    }
+
+}

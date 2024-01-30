@@ -15,9 +15,9 @@ spec:
         app: pipelines-aysa-demo
     spec:
       containers:
-        - image: quay.io/openshift-pipeline/vote-api:latest
+        - image: php:7.2-apache
           imagePullPolicy: Always
-          name: pipelines-vote-api
+          name: pipelines-aysa-demo
           ports:
             - containerPort: 9000
               protocol: TCP

@@ -2,8 +2,8 @@ apiVersion: v1
 kind: Service
 metadata:
   labels:
-    app: pipelines-vote-api
-  name: pipelines-vote-api
+    app: pipelines-aysa-demo
+  name: pipelines-aysa-demo
 spec:
   type: ClusterIP
   ports:
@@ -11,4 +11,4 @@ spec:
       port: 9000
       targetPort: 9000
   selector:
-    app: pipelines-vote-api
+    app: pipelines-aysa-demo
